@@ -9,10 +9,11 @@
     background-color: lightblue;
 
 
+
   
 }
 td {
-    padding: 20px 20px 20px
+    padding: 20px 89px 30px
 }
 img {
     width: 100px;
@@ -20,5 +21,18 @@ img {
 
 }
 #kep {
+<<<<<<< HEAD
     padding: 0px;
 }#Elolap
+=======
+    padding-top: 100px;
+    width: 100px;
+}
+p {
+    padding-top: 200px;
+    }
+    
+    
+        
+    
+>>>>>>> 41ad5b3d1abfb8247c46c4f8dc3b5ae4a1cb0d0f
