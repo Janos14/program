@@ -10,10 +10,10 @@
 
 
 
-  
+
 }
 td {
-    padding: 20px 89px 30px
+    padding: 20px 20px 20px
 }
 img {
     width: 100px;
@@ -22,14 +22,11 @@ img {
 }
 #kep {
     padding: 0px;
-}#Elolap
-    padding-top: 100px;
-    width: 100px;
+}#elolap{ padding-top: 100px;
+width: 200px;
 }
-p {
-    padding-top: 200px;
-    }
     
     
-        
-    
+
+
+#elolapszoveg  {  padding-top: 150px; }
