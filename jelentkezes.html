@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelentkezés</title>
+    
+
 </head>
 
-<body>
-    <p style="text-align: center;">
+<body style="background-image: url(letöltés.jpg); text-align: center;color: red; ">
+    <p style=>
         Pucadék rp Jelentkezés
     </p>
     <p>
@@ -36,12 +38,7 @@
         legalább 5 féle módon
     </h5>
     <input type="radio" name="modon" id="/do6">
-    <p>
-        Írd le <b> részletesen</b>, hogy mit jelent PG, MG, DM, RK, DB,SK, -Játékon kívüli más kommunikációs eszköz
-        használata, Force RP, NonRp, CK, OOC szidás! Írd le mi számít forgalmas helynek! (Ha egy is kimarad már nem
-        fogadjuk el! Megtudjuk, hogyha valaki Ctrl+C-zet.)
-    </p>
-    <input type="text" name="Nonrp" id="/do7">
+
     <p>
         Melyik a világ legjobb RP szervere?
     </p>
@@ -188,7 +185,8 @@
             var v27 = document.getElementById("/do27").value;
             var v28 = document.getElementById("/do28").value;
             if (document.getElementById('/do1').checked) {
-                var v1 = document.getElementById("/do1").value;
+                document.getElementById("demo").innerHTML = document.getElementById("/do1").value;
+
             }
             else if (document.getElementById('/do2').checked) {
                 document.getElementById("demo").innerHTML
@@ -197,22 +195,9 @@
             }
             else if (document.getElementById('/do3').checked) {
                 document.getElementById("demo").innerHTML
-                    = document.getElementById("/do3").value;
-
+                = document.getElementById("/do3").value;
             }
-            else {
-                document.getElementById("demo").innerHTML;
-            }
-
-            function do1() {
-                document.getElementsById("/do1").value = v
-            }
-            document.getElementsById("demo") = v1
-
-
-
-
-
+            
 
 
 
