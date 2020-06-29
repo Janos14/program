@@ -147,7 +147,7 @@
 
     <p>
         <button onclick="Bekuldes()">Beküldés</button>
-    </p>
+    </p >
     <p id="demo">Az adminokkal együtt elbíráljuk a jelentkezésedet. Maximum 7 napon belül megtudod, hogy elfogadtuk-e.
         Ha nagyon rossz lett a lapod, akkor mi nem fogjuk elbírálni, hanem nem fogod tudni beküldeni.
 
@@ -184,7 +184,7 @@
             var v26 = document.getElementById("/do26").value;
             var v27 = document.getElementById("/do27").value;
             var v28 = document.getElementById("/do28").value;
-            if (document.getElementById('/do1').checked) {
+            if (document.getElementById('/do1').onchecked) {
                 document.getElementById("demo").innerHTML = document.getElementById("/do1").value;
 
             }
