@@ -29,4 +29,7 @@ width: 200px;
     
 
 
-#elolapszoveg  {  padding-top: 150px; }
+#elolapszoveg  { font-size: 100px; 
+text-align: center;
+ font-family: Arial, Helvetica, sans-serif ;
+margin-bottom: 30px;}
