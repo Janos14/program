@@ -148,84 +148,95 @@
     <p>
         <button onclick="Bekuldes()">Beküldés</button>
     </p>
-    <p id="h1">Az adminokkal együtt elbíráljuk a jelentkezésedet. Maximum 7 napon belül megtudod, hogy elfogadtuk-e.
-        Ha nagyon rossz lett a lapod, akkor mi nem fogjuk elbírálni, hanem nem fogod tudni beküldeni.
-
-
-    </p>
+    <p id="h1">fassfaf</p>
+    
 
     <script>
 
         function Bekuldes() {
-            
-            var Igen2 = document.getElementsByName("Igen");
-            var Igen3;
 
-            for (var i = 0; i < Igen2.length; i++) {
-                if (Igen2[i].checked)
-                    Igen3 = Igen2[i].value;
+            try {
+
+                var Igen2 = document.getElementsByName("Igen");
+                var Igen3 = 0;
+
+                for (var i = 0; i < Igen2.length; i++) {
+                    if (Igen2[i].checked)
+                        Igen3 = Igen2[i].value;
+                }
+
+                var modon2 = document.getElementsByName("modon");
+                var modon3 = 0;
+
+                for (var i = 0; i < modon2.length; i++) {
+                    if (modon2[i].checked)
+                        modon3 = modon2[i].value;
+                }
+
+                var nemez2 = document.getElementsByName("nem ez");
+                var nemez3 = 0;
+                for (var i = 0; i < nemez2.length; i++) {
+                    if (nemez2[i].checked)
+                        nemez3 = nemez2[i].value;
+                }
+
+                var pucadek2 = document.getElementsByName("pucadék");
+                var pucadek3 = 0;
+                for (var i = 0; i < pucadek2.length; i++) {
+                    if (pucadek2[i].checked)
+                        pucadek3 = pucadek2[i].value;
+                }
+
+                var nemtom2 = document.getElementsByName("nem tom");
+                var nemtom3 = 0;
+                for (var i = 0; i < nemtom2.length; i++) {
+                    if (nemtom2[i].checked)
+                        nemtom3 = nemtom2[i].value;
+                }
+
+                var admin2 = document.getElementsByName("admin");
+                var admin3 = 0;
+                for (var i = 0; i < admin2.length; i++) {
+                    if (admin2[i].checked)
+                        admin3 = admin2[i].value;
+                }
+
+                var tuti2 = document.getElementsByName("tuti");
+                var tuti3 = 0;
+                for (var i = 0; i < tuti2.length; i++) {
+                    if (tuti2[i].checked)
+                        tuti3 = tuti2[i].value;
+                }
+
+                var szolad2 = document.getElementsByName("szolad");
+                var szolad3 = 0;
+                for (var i = 0; i < szolad2.length; i++) {
+                    if (szolad2[i].checked)
+                        szolad3 = szolad2[i].value;
+                }
+
+                var szam = document.getElementsByName("100");
+                var szám = 0;
+                for (var i = 0; i < szam.length; i++) {
+                    if (szam[i].checked)
+                        szám = szam[i].value;
+                }
+
+
+                var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) + 
+                    parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
+                document.getElementById("h1").innerHTML = össz;
+
+            } catch (cerr) {
+                document.getElementById("debugger").innerHTML = err;
             }
-            var modon2 = document.getElementById("modon");
-            var modon3;
-
-            for (var i = 0; i < modon2.length; i++) {
-                if (modon2[i].checked)
-                    modon3 = modon2[i].value;
+            if (össz = 9) {
+                alert("Elfogadtuk a jelentkezésed!")
+                
+            } else {
+                alert("Nem fogadtuk el a jelentkezésed! Olvasd el a szabályzatot!")
+                
             }
-
-            var nemez2 = document.getElementById("nem ez");
-            var nemez3;
-            for (var i = 0; i < nemez2.length; i++) {
-                if (nemez2[i].checked)
-                    Inemez3 = nemez2[i].value;
-            }
-
-            var pucadek2 = document.getElementById("pucadék");
-            var pucadek3;
-            for (var i = 0; i < pucadek2.length; i++) {
-                if (pucadek2[i].checked)
-                    pucadek3 = pucadek2[i].value;
-            }
-
-            var nemtom2 = document.getElementById("nem tom");
-            var nemtom3
-            for (var i = 0; i < nemtom2.length; i++) {
-                if (nemtom2[i].checked)
-                    nemtom3 = nemtom2[i].value;
-            }
-
-            var admin2 = document.getElementById("admin");
-            var admin3
-            for (var i = 0; i < admin2.length; i++) {
-                if (admin2[i].checked)
-                    admin3 = admin2[i].value;
-            }
-
-            var tuti2 = document.getElementById("tuti");
-            var tuti3
-            for (var i = 0; i < tuti2.length; i++) {
-                if (tuti2[i].checked)
-                    tuti3 = tuti2[i].value;
-            }
-
-            var szolad2 = document.getElementById("szolad");
-            var szolad3
-            for (var i = 0; i < szolad2.length; i++) {
-                if (szolad2[i].checked)
-                    szolad3 = szolad2[i].value;
-            }
-
-            var szam = document.getElementById("100");
-            var szám
-            for (var i = 0; i < szam.length; i++) {
-                if (szam[i].checked)
-                    szám = szam[i].value;
-            }
-
-            var össz = PersInit(Igen3) + PersInit(nemez3) + PersInit(tuti3) + PersInit(modon3) + PersInit(pucadek3) + PersInit(nemtom3) + PersInit(admin3) + PersInit(szolad3) + PersInit(szám);
-            document.getElementById("h1").innerHTML =  össz;
-            
-
 
 
 
@@ -239,6 +250,7 @@
 
 
     </script>
+
 
 
 
