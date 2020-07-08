@@ -55,7 +55,7 @@
 <body>
     <header style="line-height: 60px;">
         <table>
-            <ul id= lista>
+            <ul id=lista>
                 <li><a href="GYIK">GYIK</a></li>
                 <li><a href="Elolap.html">Előlap</a></li>
                 <li><a href="Bannoltak.html">Bannoltak</a></li>
@@ -288,40 +288,19 @@
 
             var össz = parseInt(Igen3) + parseInt(nemez3) + parseInt(tuti3) + parseInt(modon3) +
                 parseInt(pucadek3) + parseInt(nemtom3) + parseInt(admin3) + parseInt(szolad3) + parseInt(szám);
-            
+
 
             if (össz > 8) {
                 alert("Elfogadtuk a jelentkezésed!");
             } else {
                 alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
             }
-            var le = 0;
-            document.body.scrollTop = le;
-            return -Math.abs(le);
-            window.onscroll = function() {scrollFunction()};
+            
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("lista").style.height = "50px";
-  } else {
-    document.getElementById("lista").style.height = "70px";
-  }
-}
+        </script>
 
 
-
-
-
-
-
-
-        }
-
-
-
-
-
-    </script>
+    
 
 
 
