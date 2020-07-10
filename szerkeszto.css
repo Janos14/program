@@ -7,10 +7,6 @@
     border-width: 2px;
     margin-left: 0px;
     background-color: lightblue;
-
-
-
-
 }
 td {
     padding: 20px 20px 20px
@@ -19,6 +15,9 @@ img {
     width: 100px;
     
 
+}
+p{
+    text-align: justify;
 }
 #kep {
     padding: 0px;
@@ -33,3 +32,19 @@ width: 200px;
 text-align: center;
  font-family: Arial, Helvetica, sans-serif ;
 margin-bottom: 30px;}
+
+.icongestaltung {
+    background: url(http://www.iconsdb.com/icons/preview/orange/stackoverflow-6-xxl.png) center center no-repeat;
+    background-size: contain;
+  
+    width: 150px;
+    height: 150px;
+  
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  
+  .icongestaltung:hover {
+    background-image: url("http://www.iconsdb.com/icons/preview/gray/stackoverflow-xxl.png");
+  }
