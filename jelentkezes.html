@@ -206,7 +206,7 @@
         <p>
             <button onclick="Bekuldes()">Beküldés</button>
         </p>
-        <p>
+        <p id="szoveg">
             Ha elfogadtuk a jelentkezésed, akkor, majd fölül le fog jönni egy alert, hogy elfogadtuk a jelentkezésed, ha
             nem
             fogadtuk el, akkor, olyan alert fog jönni, hogy nem fogadtuk el.
@@ -295,8 +295,20 @@
             } else {
                 alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
             }
-/* Ez a zárójel hiányzott.*/
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("szoveg") = Hello;
+                    document.getElementById("lista").style.height = "50px";
+                } else { }
+            }
         }
+
+
+
+
+
     </script>
 
 
