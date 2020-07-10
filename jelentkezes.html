@@ -55,6 +55,7 @@
 <body>
     <header style="line-height: 60px;">
         <table>
+            <ul id="lista">
             <ul id=lista>
                 <li><a href="GYIK">GYIK</a></li>
                 <li><a href="Elolap.html">Előlap</a></li>
@@ -211,8 +212,12 @@
             nem
             fogadtuk el, akkor, olyan alert fog jönni, hogy nem fogadtuk el.
         </p>
+
+
     </nav>
 
+
+    <p id="debugger"></p>
 
     <script>
 
@@ -295,6 +300,7 @@
             } else {
                 alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
             }
+
             
         }
         
@@ -302,6 +308,14 @@
 
         function scrollFunction() {
 
+
+            var le = 0;
+            document.body.scrollTop = le;
+            /* Ez a return utasítás, ez után már nem hívódik meg semmi az alprogramban.*/
+            return -Math.abs(le);
+
+            /* Itt volt a régi scroll function, ami csak akkor hívódott meg, ha a Beküldés gombot már egyszer meghívták.*/
+            window.onscroll = function () { scrollFunction() };
 
             var le = 0;
             document.body.scrollTop = le;
@@ -318,10 +332,19 @@
                 document.getElementById("lista").style.height = "70px";
             }
         }
+        /* Kikerült a funkció a főágba.*/
+        window.onscroll = function () { scrollFunction() };
 
-
-
-
+        function scrollFunction() {
+            /*  Ez már jó, kíírja a debugger mezőbe a szöveget.*/
+            document.getElementById("debugger").innerHTML = "scrollFunction() {";
+            /* de itt még valami baj van, az, hogy felül a header táblánál az id="lista" .*/ 
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("lista").style.height = "50px";
+            } else {
+                document.getElementById("lista").style.height = "70px";
+            }
+        }
 
     </script>
 
