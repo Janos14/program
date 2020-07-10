@@ -55,7 +55,11 @@
 <body>
     <header style="line-height: 60px;">
         <table>
+<<<<<<< HEAD
             <ul id="lista">
+=======
+            <ul id=lista>
+>>>>>>> ac22e1cac52a250ffbe2e9881c4c46a0fc505a2f
                 <li><a href="GYIK">GYIK</a></li>
                 <li><a href="Elolap.html">Előlap</a></li>
                 <li><a href="Bannoltak.html">Bannoltak</a></li>
@@ -206,7 +210,7 @@
         <p>
             <button onclick="Bekuldes()">Beküldés</button>
         </p>
-        <p>
+        <p id="szoveg">
             Ha elfogadtuk a jelentkezésed, akkor, majd fölül le fog jönni egy alert, hogy elfogadtuk a jelentkezésed, ha
             nem
             fogadtuk el, akkor, olyan alert fog jönni, hogy nem fogadtuk el.
@@ -299,13 +303,23 @@
             } else {
                 alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
             }
+<<<<<<< HEAD
             var le = 0;
             document.body.scrollTop = le;
             /* Ez a return utasítás, ez után már nem hívódik meg semmi az alprogramban.*/
             return -Math.abs(le);
 
             /* Itt volt a régi scroll function, ami csak akkor hívódott meg, ha a Beküldés gombot már egyszer meghívták.*/
+=======
+            window.onscroll = function () { scrollFunction() };
+>>>>>>> ac22e1cac52a250ffbe2e9881c4c46a0fc505a2f
 
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("szoveg") = Hello;
+                    document.getElementById("lista").style.height = "50px";
+                } else { }
+            }
         }
         /* Kikerült a funkció a főágba.*/
         window.onscroll = function () { scrollFunction() };
@@ -323,6 +337,12 @@
 
     </script>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ac22e1cac52a250ffbe2e9881c4c46a0fc505a2f
 </body>
 
 </html>
