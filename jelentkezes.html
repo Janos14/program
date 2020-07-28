@@ -31,10 +31,10 @@
             width: 100%;
             right: 0;
             height: 70px;
-            
+
 
         }
-    
+
 
 
         li a {
@@ -45,8 +45,9 @@
             text-decoration: none;
             margin: 0px;
             float: left;
-            -webkit-transition: background-color ease;
-}
+            transition: background-color 0.5s ease;
+        }
+
         li a:hover {
             background-color: green;
         }
@@ -59,12 +60,12 @@
     <header style="line-height: 60px;">
         <table>
             <ul id="lista">
-            <ul id=lista>
-                <li><a href="GYIK">GYIK</a></li>
-                <li><a href="Elolap.html">Előlap</a></li>
-                <li><a href="Bannoltak.html">Bannoltak</a></li>
-                <li><a href="/Fórum.html">Fórum</a></li>
-            </ul>
+                <ul id=lista>
+                    <li><a href="GYIK">GYIK</a></li>
+                    <li><a href="Elolap.html">Előlap</a></li>
+                    <li><a href="Bannoltak.html">Bannoltak</a></li>
+                    <li><a href="/Fórum.html">Fórum</a></li>
+                </ul>
 
 
         </table>
@@ -304,10 +305,21 @@
                 alert("Nem fogadtuk el a jelentkezésed! Olvasd át jobban a szabályzatot!");
             }
 
-            
+
         }
-        
-       
+        var h = document.documentElement,
+            b = document.body;
+        st = 'scrollTop';
+        sh = 'scrollHeight';
+
+        var percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        document.getElementById("szoveg").innerHTML = percent;
+        if (percent > 20) {
+            document.getElementById("lista").style.height = "50px";
+        }
+
+
+
 
     </script>
 
