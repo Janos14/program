@@ -312,7 +312,8 @@
         st = 'scrollTop';
         sh = 'scrollHeight';
 
-        var percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+        var percent = (h[st] || b[st]) / ((h[sh] || b[sh])) * 100;
+        //- h.clientHeight
         document.getElementById("szoveg").innerHTML = percent;
         if (percent > 20) {
             document.getElementById("lista").style.height = "50px";
