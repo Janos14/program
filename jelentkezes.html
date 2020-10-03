@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelentkezés</title>
     <style>
+        
+        
+        
+        
+        
         h5 {
             text-align: center;
             color: red;
@@ -31,6 +36,7 @@
             width: 100%;
             right: 0;
             height: 70px;
+            transition: 0.3s;
 
 
         }
@@ -56,11 +62,11 @@
 
 </head>
 
-<body>
+<body style="background-image: url('pucu.jpg')">
     <header style="line-height: 60px;">
         <table>
-            <ul id="lista">
-                <ul id=lista>
+            
+                <ul id="lista">
                     <li><a href="GYIK">GYIK</a></li>
                     <li><a href="Elolap.html">Előlap</a></li>
                     <li><a href="Bannoltak.html">Bannoltak</a></li>
@@ -307,17 +313,15 @@
 
 
         }
-        var h = document.documentElement,
-            b = document.body;
-        st = 'scrollTop';
-        sh = 'scrollHeight';
+        window.onscroll = function() {scrollFunction()};
 
-        var percent = (h[st] || b[st]) / ((h[sh] || b[sh])) * 100;
-        //- h.clientHeight
-        document.getElementById("szoveg").innerHTML = percent;
-        if (percent > 20) {
-            document.getElementById("lista").style.height = "50px";
-        }
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("lista").style.top = "-50px";
+  } else {
+    document.getElementById("lista").style.top = "0px";
+  }
+}
 
 
 
